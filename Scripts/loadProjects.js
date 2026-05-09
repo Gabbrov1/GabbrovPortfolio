@@ -28,6 +28,7 @@ function loadProjects() {
     projects.forEach(project => {
         
         //Divs
+        const projectContainer = document.createElement('div');
         const HeaderContainer = document.createElement('div');
         const BodyContainer = document.createElement('div');
         
@@ -55,16 +56,19 @@ function loadProjects() {
         link.href = project.link;
         
         
-        // Adding Emlements to the DOM
-        link.appendChild(projectTitle); // Set project title as link
-
-        HeaderContainer.appendChild(link);
+        // Adding Elements to the DOM
+        HeaderContainer.appendChild(projectTitle);
         BodyContainer.appendChild(descriptionText);
         BodyContainer.appendChild(imageElement);
         
-        listItem.appendChild(HeaderContainer);
-        listItem.appendChild(BodyContainer);
+        projectContainer.appendChild(HeaderContainer);
+        projectContainer.appendChild(BodyContainer);
+
+        
+        link.appendChild(projectContainer);
+        listItem.appendChild(link);
         projectList.appendChild(listItem);
+        
     });
 }
 
