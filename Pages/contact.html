@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Styles/master.css">
+        <link rel="stylesheet" href="../Styles/navBar.css">
+        <link rel="stylesheet" href="../Styles/contact.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+        <script src="../Scripts/contactQrGenerator.js" defer></script>
+        <script src="../Scripts/navBar.js" defer></script>
+        
+
+        <title>Gabriel Sorica | Portfolio</title>
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+
+        <div class="title-container">
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out!</p>
+        </div>
+
+        <div class="contact-info-container">
+            <p class="contact-info">You can contact me via email at: 
+                <a href="mailto:ionut4965@gmail.com">
+                    ionut4965@gmail.com
+                </a>
+            </p>
+        </div>
+
+        <div class="contact-info-container">
+            
+            <div class="socials-contact">
+                <a href="https://www.linkedin.com/in/gabriel-sorica-b30645227/" target="_blank">
+                    <div class="qr-header">
+                        <img id="LinkedIn-Logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40">
+                        <p>LinkedIn</p>
+                    </div>    
+
+                <div class="qr-code" id="linkedin-qr"></div>
+                </a>
+            </div>
+            
+            <div class="socials-contact">
+                <a href="https://github.com/Gabbrov1" target="_blank">
+                    <div class="qr-header">
+                        <img id="GitHub-Logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" height="40">
+                        <p>Github</p>
+                    </div>
+                
+                    <div class="qr-code" id="github-qr"></div>                
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-container">
+            <h2>Get in Touch</h2>
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        
+
+
+    </body>
+</html>

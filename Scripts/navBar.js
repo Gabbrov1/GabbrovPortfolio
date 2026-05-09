@@ -27,6 +27,8 @@ function generateNavBar() {
             link.classList.add('active');
         }
         
+        listItem.classList.add('nav-item');
+
         link.href = item.link;
         link.textContent = item.name;
         
