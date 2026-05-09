@@ -1,0 +1,13 @@
+.pdf-container {
+    position: block;
+    width: 80%;
+}
+
+iframe {
+    display: block;
+    justify-self: center;
+    width: 70%;
+    height: 600px;
+    border-radius: 20px;
+    border: 2px solid #e0e0e0;
+}

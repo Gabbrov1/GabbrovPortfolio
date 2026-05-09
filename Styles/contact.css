@@ -93,11 +93,19 @@
 }
 
 .qr-header{
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    align-self: center;
+    align-content: center;
 }
 
+.qr-header p{
+    font-size: 20px;
+    font-weight: bold;
+    align-content: center;
+    margin: 0.8rem 0 ;
+
+}
 
 
 
