@@ -39,8 +39,8 @@
         height: auto;
         margin-left: 1rem;
 
-        width: 2rem;
-        height: 2rem;
+        width: 3rem;
+        height: 3rem;
     }
 
     .navbar{
@@ -52,6 +52,10 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.5s ease-in-out;
+    }
+
+    .nav-item a{
+        font-size: 1.5rem;
     }
 
     .nav-item a.active {
