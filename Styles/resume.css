@@ -1,7 +1,12 @@
+.page-title{
+    display: block;
+}
+
 .pdf-container {
     position: block;
     width: 80%;
 }
+
 
 iframe {
     display: block;
@@ -10,4 +15,15 @@ iframe {
     height: 600px;
     border-radius: 20px;
     border: 2px solid #e0e0e0;
+}
+
+@media (max-width:768px) {
+    iframe{
+        width: 95%;
+        border: none;
+        
+    }
+    .page-title{
+        display: none;
+    }
 }

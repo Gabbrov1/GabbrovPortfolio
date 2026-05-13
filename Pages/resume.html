@@ -8,9 +8,7 @@
         <link rel="stylesheet" href="../Styles/resume.css">
 
 
-        <script src="../Scripts/navBar.js" defer></script>
-        <script src="../Scripts/awsIntegration.js" defer></script>
-        
+        <script src="../Scripts/navBar.js" defer></script>        
 
         <title>Gabriel Sorica | Portfolio</title>
     </head>
@@ -18,11 +16,22 @@
         <div id="nav-placeholder"></div>
 
         <div class="title-container">
-            <h1>Resume</h1>
+            <h1 class="page-title">Resume</h1>
             
             <div class="PdfContainer">
                 <iframe id="pdf-viewer-frame" class="pdf-iframe" src="../Resources/IGS_Resume.pdf" width="60%" height="500px"></iframe>
             </div>
+
+            <script>
+                const iframe = document.getElementById('pdf-viewer-frame');
+
+                function updateTitle() {
+                    iframe.title = window.innerWidth < 768 ? 'Resume' : '';
+                }
+
+                updateTitle();
+                window.addEventListener('resize', updateTitle);
+            </script>
         </div>
     </body>
 </html>

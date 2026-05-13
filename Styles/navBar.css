@@ -29,8 +29,36 @@
 }
 
 
+.hamburger {
+    display: none;
+}
+
 @media (max-width: 768px) {
-    body{
-        padding: 1rem;
+    .hamburger {
+        display: block;
+        height: auto;
+        margin-left: 1rem;
+
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .navbar{
+        justify-content: flex-start;
+    }
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    .nav-item a.active {
+        padding-left: 1rem;
+    }
+
+    .navbar ul.open {
+        max-height: 500px;
     }
 }
