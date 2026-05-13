@@ -1,6 +1,8 @@
 import { getImageFromS3 } from './awsIntegration.js';
 import createImageCard from './basicImageCard.js';
 
+import {getRandomImage,getColorFromSeed} from './helpers.js';
+
 let allProjects = [];
 
 async function loadProjects() {
@@ -97,23 +99,6 @@ async function getProjectsFromGit() {
         topics: repo.topics ?? [],
     }));
 }
-
-// ------------------------------------Helpers-------------------------------------
-function getRandomImage() {
-    const randomSeed = Math.floor(Math.random() * 999999);
-    return `https://picsum.photos/seed/${randomSeed}/300/200`;
-}
-
-function getColorFromSeed(str) {
-    const hash = [...str].reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    const hue = hash % 360;
-    const saturation = 60 + (hash % 20); // 60-80%
-    const lightness = 35 + (hash % 20);  // 35-55%
-    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-}
-
-
-
 
 
 

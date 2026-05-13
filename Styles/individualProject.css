@@ -144,4 +144,15 @@
     #project-link {
         margin-left: 0;
     }
+
+    .project-page{
+        margin:0.25rem;
+        padding: 0;
+    }
+
+    .readme-container{
+        margin:0;
+        padding:1rem;
+        width: 90%;
+    }
 }
