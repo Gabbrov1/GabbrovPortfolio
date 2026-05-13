@@ -5,8 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../Styles/master.css">
         <link rel="stylesheet" href="../Styles/navBar.css">
+        <link rel="stylesheet" href="../Styles/projects.css">
 
         <script src="../Scripts/navBar.js" defer></script>
+        <script src="../Scripts/load.js"></script>
+        <script type="module" src="../Scripts/loadProjects.js"></script>
+        <script type="module" src="../Scripts/awsIntegration.js"></script>
         
 
         <title>Gabriel Sorica | Portfolio</title>
@@ -16,10 +20,18 @@
 
         <div class="title-container">
             <h1>Projects</h1>
+            <div class="filter-holder">
+                <input id="search-input" type="text" placeholder="Search projects..." oninput="filterResults(this.value, document.getElementById('language-filter').value)" />
+                <select id="language-filter" onchange="filterResults(document.getElementById('search-input').value, this.value)">
+                    <option value="">All Languages</option>
+                    <option value="JS">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="Astro">Astro</option>
+                </select>
+            </div>
+            
             <div class="ProjectsHolder">
-                <ul id="projects-list">
-
-                </ul>
+                <ul id="project-list"></ul>
             </div>
         </div>
     </body>

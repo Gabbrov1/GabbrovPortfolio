@@ -23,6 +23,44 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.project-topics{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.topic-badge{
+    padding: 0.5rem;
+    border-radius: 1rem;
+
+
+}
+.topic-badge:nth-child(n+4) {
+    display: none;
+}
+
+.filter-holder {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.filter-holder #search-input {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    border-radius: 1rem;
+    border: 0.5rem solid #ddd;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.filter-holder #search-input:focus {
+    border-color: #888;
+}
+
+
 .project-item h3{
     margin-top: 0;
     color: #007BFF;

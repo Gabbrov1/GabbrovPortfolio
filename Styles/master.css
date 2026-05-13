@@ -23,9 +23,3 @@ ul{
         padding: 1rem;
     }
 }
-
-@media (max-width: 800px) and (min-width: 769px) {
-    .project-item{
-        width: calc(50% - 4rem - 2rem); /* 2 items per row with gap */
-    }
-}
