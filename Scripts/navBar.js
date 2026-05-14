@@ -17,7 +17,6 @@ function generateNavBar() {
     const navItems = [
         { name: 'Home', link: 'home.html' },
         { name: 'Projects', link: 'projects.html' },
-        { name: 'About', link: 'about.html' },
         { name: 'Contact', link: 'contact.html' },
         { name: 'Resume', link: 'resume.html' }
     ];

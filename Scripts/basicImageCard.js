@@ -3,6 +3,8 @@ export default function createImageCard(imageName, altText,link=false) {
     card.classList.add('image-card');
 
     const img = document.createElement('img');
+
+    //The link is used in case there is no available image
     if(link){
         img.src = imageName;
     }

@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../Styles/master.css">
         <link rel="stylesheet" href="../Styles/navBar.css">
         <link rel="stylesheet" href="../Styles/projects.css">
+        <link rel="stylesheet" href="../Styles/home.css">
 
         <script src="../Scripts/load.js"></script>
         <script type="module" src="../Scripts/loadProjects.js"></script>
@@ -28,5 +29,31 @@
             <ul id="project-list">
             </ul>
         </div>
+
+        <section id="about">
+            <h2>About This Site</h2>
+            <p>
+                This is my third portfolio, built after two previous attempts that were scrapped for being 
+                over-engineered. The first was written in Blazor and hosted on Azure. It worked, but the 
+                hosting costs for such a simple site were hard to justify. The second used Astro, React, and 
+                MSSQL, a stack that introduced far more complexity than the project ever needed.
+            </p>
+            <p>
+                The solution was to go back to basics. This version is written in vanilla HTML, CSS, and 
+                JavaScript with no frameworks, no build pipeline, and no dependencies. The codebase is lean 
+                and easy to maintain, and the site is statically hosted on GitHub Pages at zero cost.
+            </p>
+            <p>
+                The frontend is simple, but the site does integrate with a small backend. Images are stored 
+                in an AWS S3 bucket and served through a Lambda function exposed via API Gateway. This keeps 
+                assets decoupled from the static site and avoids exposing the bucket publicly. Projects are 
+                fetched at runtime from the GitHub API, so the portfolio stays current without any manual 
+                updates.
+            </p>
+            <p>
+                The result is a site that is fast, cheap to run, and easy to extend. Built with the same 
+                principles I try to apply to my work: simplicity, clarity, and purpose.
+            </p>
+        </section>
     </body>
 </html>

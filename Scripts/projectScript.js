@@ -1,4 +1,4 @@
-import {getRandomImage,getColorFromSeed} from './helpers.js';
+import {getRandomImage,getColorFromSeed,renderIcons} from './helpers.js';
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
@@ -20,7 +20,8 @@ async function loadProject(id) {
     document.getElementById('project-title').textContent = repo.name;
     document.getElementById('project-description').textContent = repo.description;
     document.getElementById('project-language').textContent = repo.language;
-    document.getElementById('project-stars').textContent = repo.stargazers_count;
+    document.getElementById('project-stars').innerHTML  = renderIcons(repo.stargazers_count);
+
     document.getElementById('project-link').href = repo.html_url;
 
     // Topics

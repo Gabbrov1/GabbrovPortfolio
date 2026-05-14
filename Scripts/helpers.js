@@ -11,3 +11,10 @@ export function getColorFromSeed(str) {
     const lightness = 35 + (hash % 20);  // 35-55%
     return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
+
+export function renderIcons(count) {
+
+    return count > 5
+    ? `⭐ (${count})`
+    : `<span class="icon">⭐</span>`.repeat(count);
+}
