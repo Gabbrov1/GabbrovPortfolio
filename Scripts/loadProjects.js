@@ -7,7 +7,13 @@ let allProjects = [];
 
 async function loadProjects() {
 
-    const imageNames= {"Game-Repo" : "Game-Repo.jpeg"};
+    const imageNames = {
+        "Game-Repo": "Game-Repo.jpeg",
+        "FProject-Web": "CodeIndex-Web.JPG",
+        "FProject-App": "CodeIndex-App.JPG",
+        "GabbrovPortfolio":"Portfolio.JPG"
+
+    };
     const projectList = document.getElementById('project-list');
 
     allProjects = await getProjectsFromGit();
