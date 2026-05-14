@@ -53,7 +53,7 @@ function renderProjects(projects) {
             const badge = document.createElement('span');
             badge.textContent = topic;
             badge.classList.add('topic-badge');
-            badge.style.backgroundColor = getColorFromSeed(topic);
+            /*  badge.style.backgroundColor = getColorFromSeed(topic) // Random Color Feature currently disabled based on user feedback;  */
             topicsContainer.appendChild(badge);
         });
 
