@@ -11,7 +11,8 @@ async function loadProjects() {
         "Game-Repo": "Game-Repo.jpeg",
         "FProject-Web": "CodeIndex-Web.JPG",
         "FProject-App": "CodeIndex-App.JPG",
-        "GabbrovPortfolio":"Portfolio.JPG"
+        "GabbrovPortfolio":"Portfolio.JPG",
+        "sd_Coursework":"sysDev.JPG"
 
     };
     const projectList = document.getElementById('project-list');
