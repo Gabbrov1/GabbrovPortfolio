@@ -6,6 +6,8 @@ import {getRandomImage,getColorFromSeed} from './helpers.js';
 let allProjects = [];
 
 async function loadProjects() {
+
+    const imageNames= {"Game-Repo" : "Game-Repo.jpeg"};
     const projectList = document.getElementById('project-list');
 
     allProjects = await getProjectsFromGit();
@@ -14,7 +16,12 @@ async function loadProjects() {
         throw new Error("Could not load any Github Projects.");
     }
 
-    renderProjects(allProjects);
+    const projectsWithImages = allProjects.map(project => ({
+        ...project,
+        imageName: imageNames[project.name] || null
+    }));
+
+    renderProjects(projectsWithImages);
 }
 
 function renderProjects(projects) {

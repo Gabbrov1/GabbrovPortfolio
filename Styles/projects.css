@@ -81,8 +81,11 @@
 
 }
 .project-item img{
+    width: 20rem;
+    height: 15rem;
+    object-fit: cover;
     max-width: 100%;
-    height: auto;
+
     border-radius: 4px;
     margin-top: 1rem;
 
